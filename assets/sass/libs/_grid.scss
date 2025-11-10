@@ -1,0 +1,74 @@
+// set of sass extensions/mixins to rapidly apply layout styling to elements whilst retaining the semantic classnames
+
+@mixin wrap($d:"left") {
+	text-align:unquote($d);
+}
+
+@mixin grid($s:"auto", $u:"%", $d:"left"){
+	display:inline-block;
+	margin-right:-4px;
+	text-align:unquote($d); // resets text align to left (if wrapper is set to right)
+	width:unquote($s + $u);
+	vertical-align:top;
+}
+
+@mixin gutter($l, $r:false, $u:"px") {
+
+	@if not $r {
+		padding:0 unquote($l + $u);
+	}
+
+	@else {
+		padding:0 unquote($r + $u) 0 unquote($l + $u);
+	}
+	
+}
+
+// class names can be used directly or used as an extension
+.g {
+	@include wrap(); // defaults to left
+}
+
+	.g--rtl {
+		@include wrap("right");
+	}
+
+	.g--cen {
+		@include wrap("center");
+	}
+
+.b {
+	@include grid(); // defaults to left
+}
+
+	.b--rtl {
+		text-align:right;
+	}
+
+	.b--cen {
+		text-align:center;
+	}
+
+	$widths: 16 16.66, 25 25, 50 50, 75 75, 33 33.33, 66 66.66; // classname width,
+
+	@each $width in $widths {
+
+		$class: nth($width, 1);
+		$value: nth($width, 2);
+
+		.b--#{$class} {
+			width:unquote($value + '%');
+		}
+
+	}
+
+.ff {
+	display:table;
+	width:100%;
+}
+
+	.b--ff {
+		display:table-cell;
+		margin-right:0;
+		width:auto;
+	}

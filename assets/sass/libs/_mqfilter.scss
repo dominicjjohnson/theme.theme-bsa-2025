@@ -1,0 +1,30 @@
+// mixin to serve media queries
+
+@mixin bp($point:0, $u:"px") {
+
+	@if ($mq) {
+
+		@media screen and (min-width:unquote($point + $u)) { @content; }
+
+	}
+
+	@else if ($point <= $mqlimit) {
+
+		@content;
+
+	}
+
+}
+
+
+@mixin tablet_only_style() {
+	@media screen and (min-width: 640px) and (max-width: 1200px) { 
+		@content;
+	}
+}
+
+@mixin mobile_only_style() {
+	@media screen and (max-width: 640px) { 
+		@content;
+	}
+}

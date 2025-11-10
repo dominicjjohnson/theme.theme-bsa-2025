@@ -1,0 +1,56 @@
+table.atoz_table{
+	td{
+		font-size: 12px;
+	}
+}
+
+table#participant-list{
+	width: 100%;
+	tr {
+		th{
+			color: #333;
+			font-weight: bold;
+			text-align: center;
+			padding: 3px;
+			font-size: 14px;
+		}
+		td{
+			text-align: center;
+			font-size: 14px;
+			padding: 4px;
+			vertical-align: top;
+			&:first-child{
+				text-align: left;
+			}
+			&:nth-child(3),
+			&:nth-child(4),
+			&:nth-child(5){
+				width: 100px;
+			}
+			&.logo{
+				.logo-wrapper{
+					display: block;
+					text-align: center;
+					border: 1px solid #ddd;
+					padding: 2px;
+					background: #fff;
+					img{
+					}
+				}
+			}
+			i{
+				padding: 2px;
+				&.participant-speaker:hover{ color: #666;}
+				&.participant-exhibitor{ color: #D50020;}
+				&.participant-exhibitor:hover{ color: #666;}
+				&.participant-sponsor{ color: #2C982A;}
+				&.participant-sponsor:hover{ color: #666;}
+			}
+		}
+	}
+	tr{
+		border-bottom: 1px solid #ddd;
+	}
+}
+
+

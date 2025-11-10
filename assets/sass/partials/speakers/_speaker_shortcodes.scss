@@ -1,0 +1,191 @@
+a.horizontal-speaker,
+a.horizontal-speaker:link,
+a.horizontal-speaker:visited,
+a.horizontal-speaker:active,
+.horizontal-speaker{
+	width:31% !important;
+	min-height:275px;
+	.speaker-avatar{
+    border:none !important;
+    height: 180px !important;
+    margin:0px auto 10px;
+    width: 180px !important;
+    border-radius:50%;
+    text-align:center;
+  }
+  .full-name{
+    font-size: 20px !important;
+    line-height: 16px !important;
+    color:#000 !important;
+    font-weight:400 !important;
+  }
+  .position{
+    color: #f5883c !important;
+    font-size: 16px !important;
+    .speaker-job-title {
+	    font-style:normal !important;
+    }
+    .speaker-company-name {
+	    font-size:16px !important;
+	    strong {
+		    color:#F5883C !important;
+		    font-weight:200 !important;
+	    }
+    }
+  }
+}
+.speaker-list-horizontal .inner .horizontal-speaker:nth-child(3n+1) {
+	clear:both;
+}
+
+@media only screen and (max-width:960px) {
+	a.horizontal-speaker, a.horizontal-speaker:link, a.horizontal-speaker:visited, a.horizontal-speaker:active, .horizontal-speaker { float:none; width:47% !important; }
+	 .speaker-list-horizontal .inner .horizontal-speaker:nth-child(3n+1) {
+	clear:none;
+}
+	.speaker-list-horizontal .inner .horizontal-speaker:nth-child(2n+1) {
+	clear:both;
+}
+}
+
+@media only screen and (max-width:640px) {
+	a.horizontal-speaker, a.horizontal-speaker:link, a.horizontal-speaker:visited, a.horizontal-speaker:active, .horizontal-speaker { float:none; width:100% !important; }
+}
+
+.speaker-list-horizontal .divide-4-clear {
+	clear:none !important;
+}
+
+#content .speaker-list{
+  margin: 0px 0px 20px;
+  a.horizontal-speaker, 
+  a.horizontal-speaker:link, 
+  a.horizontal-speaker:visited, 
+  a.horizontal-speaker:active, 
+  .horizontal-speaker{
+	min-width: 100px;
+	max-width: 140px;
+	float: none;
+	display: inline-block;
+	vertical-align: top; // Strangely, inline-block support valign in chrome :S
+	text-align: center;
+    span.speaker-avatar{
+  		margin: 0px;
+  		width: 100%;
+  		height: 145px;
+  		border: none;
+  		margin-bottom: 5px;
+  		max-width: 150px;
+  		margin: 0 auto 5px;
+    }
+    .full-name{
+      margin-bottom: 0px;
+      font-size: 13px;
+      line-height: 1.6px;
+      line-height: 1.6rem;
+      padding-bottom: 5px;
+    }
+    .position{
+      margin-bottom: 5px;
+      .speaker-company-name,
+      .speaker-job-title{
+        font-size: 11px;
+        line-height: 1.2px;
+        line-height: 1.2rem;
+      }
+    }
+    
+  }
+  a.horizontal-speaker:hover{
+    text-decoration: none;
+  }
+  .vertical-speaker{
+    border: none;
+    .vertical-speaker-content{
+      .full-name{
+        padding: 0px;
+        margin-bottom: 0px;
+      }
+      p.position{
+        margin: 0px;
+      }
+    }
+  }
+  .position{
+    font-size:12px;
+    .speaker-job-title,
+    .speaker-company{
+      font-size: 12px;
+    }
+  }
+  .featured-speaker{
+    width: 50%;
+    margin: 0px;
+    .featured-speaker-content{
+      background: none;
+      padding: 0px;
+      .full-name{
+        background: url('../img/grey-trans.png');
+        padding: 3px;
+        display: block;
+        float: right;
+      }
+      .position{
+        background: url('../img/grey-trans.png');
+        padding: 3px;
+        display: block;
+        clear: right;
+        float:right;
+      }
+    }
+  }
+}
+#content{
+  &.double-sidebar{
+    a.horizontal-speaker, 
+    a.horizontal-speaker:link, 
+    a.horizontal-speaker:visited, 
+    a.horizontal-speaker:active, 
+    .horizontal-speaker{
+      span.speaker-avatar{
+        height: 110px; // Issue with double sidebar layout where image was the wrong shape and cutting heads.
+      }
+    }
+  }
+}
+
+body.single-speakers{
+  #single-speaker-photo{
+    float: right;
+    padding: 10px;
+    background: #fff;
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+}
+
+.speaker-list-vertical{
+  .vertical-speaker{
+    border: none;
+  }
+}
+.speaker-list-horizontal{
+	.inner{
+		text-align: center;
+	}
+	.divide-2-clear,
+	.divide-4-clear{
+		// clear: none !important;
+		// display: inline-block;
+	}
+}
+
+
+.speaker-avatar-wrap{
+  img{
+    max-width: 48px;
+    width: auto;
+    height: auto;
+  }
+}

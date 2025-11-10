@@ -1,0 +1,45 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;/* HTML5 display-role reset for older browsers */}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block;}
+body {line-height:1;}
+ol, ul {list-style:none;}
+blockquote, q {quotes:none;}
+blockquote:before, 
+blockquote:after, 
+q:before, 
+q:after {content:'';content: none;}
+table {border-collapse:collapse;border-spacing:0;}
+.clear {clear:both;}
+.g {text-align:left;}
+.g--rtl {text-align:right;}
+.g--cen {text-align:center;}
+.b {display:inline-block;margin-right:-4px;text-align:left;width:auto%;vertical-align:top;}
+.b--rtl {text-align:right;}
+.b--cen {text-align:center;}
+.b--16 {width:16.66%;}
+.b--25 {width:25%;}
+.b--50 {width:50%;}
+.b--75 {width:75%;}
+.b--33 {width:33.33%;}
+.b--66 {width:66.66%;}
+.ff {display:table;width:100%;}
+.b--ff {display:table-cell;margin-right:0;width:auto;}
+* {box-sizing:border-box;}
+body, 
+html {overflow-x:hidden;width:100%;}
+.editor p br {display:block;}
+img {max-width:100%;width:auto;height:auto;}
+.editor br {display:initial !important;}
+.editor a.btn, 
+.editor a.btn:active, 
+.editor a.btn:visited {background-color:#42b8dd;color:#fff;text-decoration:none;padding:0.25em 0.75em;border-radius:0.5em;display:inline-block;text-align:center;margin-bottom:5px;}
+.editor a.btn:hover, 
+.editor a.btn:focus {text-decoration:underline;}
+.fw-row {margin:0 !important;}
+.sidebar {padding:0 10px;margin-bottom:20px;padding-bottom:50px;padding-top:50px;margin-left:30px;text-align:center !important;}
+.widget {margin-bottom:15px;}
+@media screen and (min-width: 640px) {
+	.sidebar {display:inline-block;margin-right:-4px;text-align:left;width:27%;vertical-align:top;}
+}
+@media screen and (max-width: 640px) {
+	.sidebar {width:90%;max-width:300px;margin:0 auto;display:block;padding:0px;}
+}

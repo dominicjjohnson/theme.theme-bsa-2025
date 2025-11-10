@@ -1,0 +1,73 @@
+.footer__block {
+	.magazinecover__desc {
+		@include grid(50);
+		padding:10px 20px 10px 0;
+		p {
+			font:{
+				size:14px;
+			}
+			line-height:20px;
+			margin-bottom:10px;
+		}
+		strong {
+			color:#111;
+			font: {
+				weight:600;
+			}
+		}
+		em {
+			color:#111;
+			font: {
+				style:italic;
+			}
+		}
+		a {
+			color:$yellow;
+			font: {
+				weight:600;
+			}
+		}
+		a:hover {
+			color:$orange;
+		}
+	}
+	.magazinecover__thumb {
+		@include grid(50);
+		padding:10px 0 10px 0;
+		img {
+			display:block;
+			margin-bottom:10px;
+			max-width:100%;
+		}
+	}
+	.magazinecover__buy {
+		p {
+			font:{
+				size:14px;
+			}
+			line-height:20px;
+		}
+		strong {
+			color:#111;
+			font: {
+				weight:600;
+			}
+			margin-bottom:10px;
+		}
+		em {
+			color:#111;
+			font: {
+				style:italic;
+			}
+		}
+		a {
+			color:$yellow;
+			font: {
+				weight:600;
+			}
+		}
+		a:hover {
+			color:$orange;
+		}		
+	}
+}

@@ -1,0 +1,25 @@
+.sidebar{
+  .widget{
+    &.widget_nav_menu{
+
+      li{
+        margin-bottom: 5px;
+        a{
+          &:link,
+          &:visited,
+          &:active{
+            text-decoration: none;
+            color: #666;
+          }
+          &:hover,
+          &:focus{
+            text-decoration: underline;
+          }
+        }
+        .sub-menu{
+          margin: 10px;
+        }
+      }
+    }
+  }
+}

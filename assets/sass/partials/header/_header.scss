@@ -1,0 +1,128 @@
+
+.header {
+	width: 100%;
+	background-color:#FFF;
+	padding:0px 10px;
+	.header-container{
+		width: 100%;
+		max-width:1200px;
+		margin:50px auto 50px auto;
+		.header-details {
+			width:49%;
+			float:left;
+		}
+		.header-logo {
+			width:49%;
+			float:right;
+			text-align:right;
+			.social {
+				padding:22px 0px 0px;
+				display:table;
+				float:right;
+				.register-btn {
+					color:#FFF;
+					background-color:#dc582a;
+					padding:0.4em 1.5em;
+					border-radius:1em;
+					display:inline-block;
+					margin-right:78px;
+					text-transform:uppercase;
+					text-decoration:none;
+					i {
+						margin-left:15px;
+					}
+					&:hover {
+						text-decoration:underline;
+					}
+				}
+				.social-icon {
+					display:table-cell;
+					vertical-align:middle;
+					padding:0px 0px 0px 3px;
+					img {
+						width:30px;
+						height:30px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:750px) {
+	.header .header-container .header-logo .social .register-btn { padding:0.4em 0.75em; margin-right:20px; }
+}
+
+@media only screen and (max-width:640px) {
+	.header .header-container { margin-bottom:10px; }
+	.header .header-container .header-details, .header .header-container .header-logo { float:none; width:100%; text-align:center; padding:10px; }
+	.header .header-container .header-logo .social { float:none; width:70%; margin:auto; }
+}
+
+@media only screen and (max-width:440px) {
+	.header .header-container .header-logo .social { width:100%; }
+}
+
+@include tablet_only_style(){
+	.top_bar{
+		height: 60px;
+		width: 100%;
+	}
+}
+
+@include mobile_only_style(){
+	.top_bar{
+		height: 60px;
+		width: 100%;
+	}
+	
+	.header{
+		margin-top: 50px; // Make room for the burger menu
+		padding: 10px;
+		
+		.header-container{
+			width: 100%;
+			margin: 20px auto;
+			
+			.header-details {
+				width: 60%;
+				float: left;
+				
+				img {
+					max-width: 100%;
+					height: auto;
+				}
+			}
+			
+			.header-logo {
+				width: 40%;
+				float: right;
+				text-align: right;
+				
+				.social {
+					padding: 10px 0;
+					
+					.register-btn {
+						margin-right: 10px;
+						font-size: 12px;
+						padding: 0.3em 1em;
+					}
+					
+					.social-icon {
+						margin-left: 5px;
+						
+						img {
+							width: 24px;
+							height: 24px;
+						}
+					}
+				}
+			}
+		}
+		
+		// Hide desktop navigation on mobile
+		.nav {
+			display: none;
+		}
+	}
+}

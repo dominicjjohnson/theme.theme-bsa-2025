@@ -1,0 +1,46 @@
+<footer class="footer">
+	<div class="wrapper">
+	<?php echo $footer_code = get_option('footer_codes', false); ?>
+		<div class="contact-form">
+		<?php gravity_form( 1, false, false, false, '', false ); ?>
+		<a class="privacy-policy-link" target="_blank" href="https://www.bsa.org.uk/privacy-policy">Privacy Policy</a>
+		</div>
+	</div>
+
+
+
+
+
+
+<section class="fw-main-row  fw-container-light-section " style="padding-top: 50px; padding-bottom: 50px;">
+
+			<div class="fw-container">
+			  <div class="fw-row">
+			    <div class="c c--50">
+			      1 of 3
+			    </div>
+			    <div class="c c--50">
+			      2 of 3 (wider)
+			    </div>
+
+			  </div>
+			</div>
+</section>
+
+
+	<div class="footer__copyright">
+		<div class="footer-wrapper">
+			<p class="footer_menu">
+				<nav class="footernav footer_menu">
+			<?php 
+				wp_nav_menu(array(
+					'theme_location' => 'footer_nav',
+				)); 
+			?>
+			</nav></p>
+			<p>Copyright © BSA <?php echo date('Y'); ?> All Rights Reserved.</p>
+			<p><a href="http://www.miramedia.co.uk/" target="_blank">Website created by Miramedia</a></p>
+			<img class="bsa-logo" src="<?php echo get_stylesheet_directory_uri().'/assets/img/BSA-White-out-Footer.png' ?>" />
+		</div>
+	</div>
+</footer>

@@ -1,0 +1,58 @@
+.editor {
+	&.full-width{
+		padding: 0px; 
+	}
+	.c {
+		@include gutter(24);
+	}
+
+	.fw-main-row {
+		padding:0px;
+	}
+
+	br {
+		display:none;
+	}
+}
+
+.home .editor,
+.page-template-page-front-page-php .editor{ 
+	.c.c--100 {
+		padding:0;
+	}
+}
+
+
+@include bp(960) {
+
+	.editor {
+		.c {
+			@include gutter(24);
+		}
+		.c--16 {
+			@include grid(16.66);
+		}
+		.c--33 {
+			@include grid(33.33);
+		}	
+		.c--25 {
+			@include grid(25);
+		}
+		.c--50 {
+			@include grid(50);
+			//@include gutter(24);
+		}
+		.c--66 {
+			@include grid(66.66);
+		}
+		.c--75 {
+			@include grid(75);
+		}
+		.c--100{
+			padding: 0px;
+			margin: 0px;
+			width: 100%;
+		}
+	}
+
+}

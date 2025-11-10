@@ -1,0 +1,97 @@
+/* Sponsor Logos Widget */
+.widget{
+  &.miramedia_sponsor_logos{
+    @include clearfix();
+    .partner-logo-wrapper{
+      @include clearfix();
+    }
+    padding: 0px;
+    width: 100%;
+    margin-left: 0px;
+    background: none;
+    ul{
+      @include clearfix();
+      height: auto;
+      width: 100%;
+      min-height: 100px;
+    }
+    li{
+      width: 130px;
+      box-sizing: border-box;
+      height: 100px;
+      background: none;
+      padding: 0px;
+      display: inline-block;
+      margin: 0 29px 10px;
+      @include clearfix();
+      &.full-width{
+        width: 100%;
+        margin: 0px;
+        margin-bottom: 10px;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .sponsor-inside{
+        width: 100%;
+        max-width: 200px;
+        background-color: none;
+        background-size: contain;
+        padding: 0px;
+        margin: 0 auto;
+      }
+      a{
+        @include clearfix();
+      }
+    }
+  }
+}
+
+
+/* Sponsor Logos Widget */
+// #sidebar{
+//   .widget{
+//     &.miramedia_sponsor_logos{
+//       padding: 0px;
+//       width: 100%;
+//       margin-left: 0px;
+//       .widget-title{
+//         margin-bottom: -5px;
+//       }
+//       li{
+//         width: 130px;
+//         height: 100px;
+//         background: #fff;
+//         padding: 5px;
+//         display: block;
+//         float: left;
+//         margin: 0px 5px 10px 5px;
+//         &.border-top{
+//           border-top-style: solid;
+//           border-top-width: 2px;
+//         }
+//         &.border-bottom{
+//           border-bottom-style: solid;
+//           border-bottom-width: 2px;
+//         }
+//         &.full-width{
+//           width: 280px;
+//         }
+//         img {
+//           max-width: 100%;
+//           height: auto;
+//         }
+//         .sponsor-inside{
+//           width: 100%;
+//           max-width: 200px;
+//           background-color: #fff;
+//           background-size: contain;
+//           padding: 0px;
+//           margin: 0 auto;
+//         }
+//       }
+//     }
+//   }
+// }
+

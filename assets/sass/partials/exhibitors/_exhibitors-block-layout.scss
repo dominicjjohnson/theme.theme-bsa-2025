@@ -1,0 +1,142 @@
+#exhibitor-list--block-layout{
+	*{
+		box-sizing: border-box; 
+	}
+	.exhibitor-list--block{
+		width: 48%;
+		box-sizing: border-box; 
+		display: inline-block;
+		vertical-align: top;
+		padding: 0px 10px;
+		margin: 0px 0px 90px 0px;
+		.logo-box{
+			width: 100%;
+			padding: 5px;
+			display: inline-block;
+			height: 100px;
+			margin-right: 5px;
+			margin-bottom:10px;
+			white-space: nowrap;
+			background-size: 90% auto;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-color:#fff;
+			img{
+				height:100%;
+			}
+		}
+		.exhibitor-text{
+			.exhibitor-title {
+				font-size:20px;
+				color:#000;
+				margin-bottom:5px;
+			}
+			.exhibitor-details p {
+				display:inline;
+			}
+			.exhibitor-details a {
+				font-size:18px;
+				line-height:24px;
+			}
+			a.company_website {
+				display:inline-block;
+				margin-top:20px;
+			}
+		}
+		p.exhibitor-types{
+			color: #90c2c2;
+			font-size:13px;
+			line-height:18px;
+			margin-bottom:10px;
+		}
+		p.exhibitor-stand {
+			color:#808285;
+		}
+		h3{
+			color: #58595b;
+			font-size: 16px;
+			font-weight: 600;
+			text-transform: none;
+			border-bottom:2px solid #58595b;
+			a:link,
+			a:visited,
+			a:active{
+				color: #58595b;
+			}
+		}
+		a:link,
+		a:visited,
+		a:active{
+			text-decoration: none;
+		}
+
+	}
+}
+
+#exhibitor-list--block-layout .exhibitor-list--block h3{float:left;width:100%;font-size:16px;padding-bottom:0;}
+.trails-logos{float:right;}
+.trails-logos img{width:24px;}
+
+#exhibitor-list--search-tools{
+	vertical-align: middle;
+	margin-bottom: 20px;
+	#exhibitor-list--atoz-wrapper{
+		display: inline-block;
+		width: 490px;
+		.atoz_table td{
+			font-size: 13px;
+			background: none;
+			color: #ccc;
+			&.clickable{
+				color: #517EB1;
+				text-decoration: none;
+				font-weight: 700;
+			}
+			&.active{
+				background: none;
+				color: #517EB1;
+			}
+		}
+	}
+	#exhibitor-list--cat-wrapper{
+		display: inline-block;
+		padding: 0px 20px;
+		vertical-align: top;
+	}
+	#exhibitor-list--search-wrapper{
+		display: inline-block;
+		padding: 0px 5px;
+		input{
+			width: 100%;
+			padding: 5px;
+			border: 1px solid #b9b9b9;
+			font-size: 13px;
+		}
+	}
+}
+
+@include mobile_only_style{
+	#exhibitor-list--block-layout .exhibitor-list--block{
+		width: 100%;
+	}	
+	#exhibitor-list--search-tools{
+		#exhibitor-list--atoz-wrapper{
+			padding: 10px;
+			margin-bottom: 20px;
+			width:100%;
+			.atoz_table td {
+				display:inline-table;
+			}
+		}
+		#exhibitor-list--cat-wrapper{
+			padding: 10px;
+			margin-bottom: 20px;
+		}
+		#exhibitor-list--search-wrapper{
+			padding: 10px;
+			margin-bottom: 20px;
+		}
+	}
+
+
+}

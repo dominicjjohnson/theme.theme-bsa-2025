@@ -1,0 +1,35 @@
+@mixin boxmodel($bm:"border-box"){
+
+	box-sizing:unquote($bm);
+
+}
+
+@mixin fontsmooth($webkit:true, $moz:true){
+
+	@if ($webkit == true) {
+		-webkit-font-smoothing: antialiased;
+	}
+
+	@if ($moz == true) {
+		-moz-osx-font-smoothing: grayscale; 
+	}
+
+}
+
+@mixin inline($fix:true) {
+
+	display:inline-block;
+
+	@if ($fix == true) {
+		margin-right:-4px;
+	}
+
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

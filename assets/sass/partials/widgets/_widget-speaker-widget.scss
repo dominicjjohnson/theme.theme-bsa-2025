@@ -1,0 +1,89 @@
+
+.widget{
+  &.miramedia_speaker_profiles{
+    width: auto;
+    display: block;
+    margin: 0px 5px;
+    padding: 0px;
+
+    .speaker-widget-wrapper{
+      width: 100%;
+      ul{width: 100% !important;}
+      li.speaker-widget-item{
+        padding: 0px;
+        border: none;
+        background: #fff;
+        margin: 0px 0px 10px;
+        .speaker-widget-image{
+          width: 80px;
+          margin-left: 20px;
+          margin-right: 0px;
+          border: none;
+          float: right;
+          display: block;
+          padding: 0px;
+          img{
+            width: 100%;
+            height: auto;
+            display: block;
+            border: none;
+          }
+          a:link{
+            position: relative;
+          }
+          a:hover{
+            background: #222;
+            position: relative;
+            img{
+              opacity: 0.8;
+              position: relative;
+            }
+            &:before{
+              position: absolute;
+              top: 3px;
+              right: 3px;
+              text-align: center;
+              font-family: 'fontAwesome';
+              font-weight: 400;
+              font-weight: normal;
+              content: "\f054";
+              color: #fff;
+              text-shadow: 0px 0px 3px #000;
+              margin-left: 10px;
+              display: block;
+              margin: 0 auto;
+              z-index: 999;
+              font-size: 3.2;
+            }
+          }
+        }
+        .speaker-widget-content{
+          padding: 10px 5px;
+          display: block;
+          .speaker-widget-name{
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            strong{
+              font-size: 14px;
+              color: #333;
+              a:link,
+              a:visited,
+              a:active {
+                color: #333;
+              }
+            }
+          }
+          small{
+            font-size: 12px;
+          }
+        }
+        &:after{
+          content: "";
+          clear: both;
+          display: block;
+        }
+      }
+    }
+  }
+}

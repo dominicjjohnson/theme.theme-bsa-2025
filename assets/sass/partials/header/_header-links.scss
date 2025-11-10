@@ -1,0 +1,126 @@
+.header__links {
+	margin-bottom:20px;
+	clear:both;
+	li {
+		@include grid(50);
+		@include gutter(0, 10);
+		font: {
+			size:14px;
+			weight:600;
+		}
+		margin-bottom:10px;
+		text: {
+			transform:uppercase;
+		}
+	}
+	li:nth-child(2n) {
+		@include gutter(10, 0);
+	}
+	a {
+		background:$blue--dark;
+		color:$white;
+		display:block;
+		padding:15px 10px;
+		text: {
+			align:center;
+			decoration:none;
+		}
+	}
+	a.about {
+		background:$purple;
+		&:hover {
+			background:$beige - 40;
+		}
+	}
+	a.portal {
+		background:$blue--dark;
+		&:hover {
+			background:$beige - 10;
+		}
+	}
+	a.magazine {
+		background:$orange;
+		&:hover {
+			background:$orange - 10;
+		}
+	}
+	a.member {
+		background:$yellow;
+		&:hover {
+			background:$yellow - 10;
+		}
+	}
+	.social {
+		display:none;
+		li, li:nth-child(2n) {
+			@include grid(21);
+			@include gutter(0, 5, $u:"%");
+		}
+		li:first-child {
+			//margin-left:-5px;
+		}
+		li:last-child {
+			//margin-right:-10px;
+			@include grid(16);
+			@include gutter(0);
+		}
+		a {
+			background:red;
+			padding:20px 5px;
+		}
+		a.twit {
+
+		}
+		a.face {
+
+		}
+		a.gplus {
+
+		}
+		a.link {
+
+		}
+		a.tube {
+
+		}
+		span {
+			display:none;
+		}
+	}
+}
+
+@include bp(660) {
+
+	.header__links {
+		li, li:nth-child(2n) {
+			@include grid(25);
+			@include gutter(5);
+			margin-bottom:0;
+		}
+	}
+
+}
+
+@include bp(960) {
+
+	.header__links {
+		clear:none;
+		@include grid(26, $d:"left");
+		@include gutter(16, 0);
+		vertical-align:middle;
+		li {
+			@include grid(50);
+			@include gutter(0, 5);
+			margin-bottom:10px;
+		}
+		li:nth-child(2n) {
+			@include grid(50);
+			@include gutter(5, 0);
+		}
+		a {
+			padding:15px 0;
+		}
+	}
+}
+
+

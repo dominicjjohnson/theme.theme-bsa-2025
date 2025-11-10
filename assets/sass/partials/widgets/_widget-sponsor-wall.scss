@@ -1,0 +1,10 @@
+.widget--sponsorwall {
+	.thumb {
+		@include grid(33);
+		padding:20px;
+		img {
+			display:block;
+			max-width:100%;
+		}
+	}
+}

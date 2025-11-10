@@ -1,0 +1,32 @@
+.sidebar {
+	@include gutter(10);
+	margin-bottom:20px;
+	padding-bottom:50px;
+	padding-top:50px;
+	margin-left: 30px;
+	text-align:center !important;
+}
+
+.widget{
+	margin-bottom: 15px;
+}
+
+@include bp(640) {
+
+	.sidebar {
+		@include grid(27);
+
+	}
+
+}
+
+@include mobile_only_style(){
+	.sidebar{
+		width: 90%;
+		max-width: 300px;
+		margin: 0 auto;
+		display: block;
+		padding: 0px;
+
+	}
+}

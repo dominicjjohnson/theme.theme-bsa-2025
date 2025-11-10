@@ -1,0 +1,30 @@
+#header-social{
+	text-align: center;
+	#social-strapline{
+		color: #c1c1c1;
+	}
+	a:link,
+	a:visited,
+	a:active{
+		display: inline-block;
+		margin: 0px;
+		-webkit-border-radius: 100%;
+		-moz-border-radius: 100%;
+		border-radius: 100%;
+		width: 30px;
+		background: #c1c1c1;
+		height: 30px;
+		i{
+			color: #fff;
+			font-size: 18px;
+			width: 30px;
+			line-height: 30px;
+			text-align: center;
+			position: relative;
+			padding-top: 2px;
+		}
+		&.twit:hover{ background: #2CA8D2; }
+		&.face:hover{ background: #305891; }
+		&.pin:hover{ background: #E1110E; }
+	}
+}

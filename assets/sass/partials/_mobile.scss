@@ -1,0 +1,12 @@
+@include mobile_only_style(){
+
+	html{
+		margin-top: 0px;
+		&.js{
+			margin-top: 0px !important;
+		}
+		#wpadminbar{
+			display: none !important;
+		}
+	}
+}

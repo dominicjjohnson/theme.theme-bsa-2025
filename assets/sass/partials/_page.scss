@@ -1,0 +1,158 @@
+
+.main {
+	@include wrap();
+	@include gutter(10);
+	min-height:800px;
+	padding-bottom:50px;
+	padding-top:50px;
+}
+
+.content {
+	@include gutter(10);
+	margin-bottom:20px;
+}
+
+.page-title h1{
+  margin-bottom: 28px;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+//   color: #1d0e46;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  display: block;
+}
+
+/** GFORM STYLING **/
+
+.page-content .gform_title{
+	color: #00285e;
+}
+
+.page-content .gfield_label{
+	color: #4c4c4c;
+	font-weight: 400 !important;
+}
+
+.page-content .gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type=submit], .gform_wrapper .gform_footer input[type=image]{
+  background: #00285e;
+  width: 100px;
+  height: 45px;
+  border: 0px;
+  margin: 0px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.page-content input#gform_submit_button_2.gform_button.button:hover{
+	background: #6ba5a5;
+}
+
+body.page-template-page-full-width-php{
+	padding: 0px;
+	aside.sidebar{display: none;}
+	.page-content{width: 100%;}
+}
+
+.fw-main-row {
+	&:first-child{
+		padding-top: 0px;
+	}
+	.fw-container{
+		max-width: 1200px;
+		margin:0 auto;
+		width:100%;
+	}
+}
+.fw-container-fluid{
+	padding: 0px;
+}
+
+@include bp(640) {
+
+	.content {
+		@include grid(66);
+	}
+
+}
+
+.page-content {
+	@include gutter(15);
+	padding: {
+		top:24px;
+		bottom:48px;
+	}
+}
+
+@include bp(720) {
+
+
+	.page-content {
+		@include grid(70);
+	}
+
+}
+
+
+.press-release-item{
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 30px;
+	padding-bottom: 10px;
+	h4{
+		font-size: 20px;
+		a,
+		a:link,
+		a:visited,
+		a:active{
+			text-decoration: none;
+		}
+	}
+	p:last-child{
+		margin-bottom: 0px;
+	}
+}
+
+#download-pdf-div{
+	padding: 0 !important;
+	margin-left:5px; 
+} 
+.generate-pdf-button{
+	margin-left:5px !important;
+}
+
+.editor .press-release-list .press-release-item .alignleft {
+	width:25%;
+}
+
+.editor br {
+	display:initial !important;
+}
+
+.editor #exhibitor-single--exhibitor-bio span {
+	line-height:1.4em;
+}
+.adresss-fields{padding-bottom:30px;}
+
+.editor a.btn, .editor a.btn:active, .editor a.btn:visited {
+	background-color:#42b8dd;
+    color:#FFF;
+    text-decoration:none;
+    padding:0.25em 0.75em;
+    border-radius:0.5em;
+    display:inline-block;
+    text-align:center;
+    margin-bottom:5px;
+}
+.editor a.btn:hover, .editor a.btn:focus {
+	text-decoration:underline;
+}
+
+.fw-row { margin:0 !important; }
+
+a.view-site, a.view-site:link, a.view-site:visited, a.view-site:active {
+	display:none;
+}
+
+body.single-seminars .speaker-for-session ul.shortcode-speakers li.speaker-line .position { font-size:18px !important; }
+body.single-seminars .speaker-for-session ul.shortcode-speakers li.speaker-line .position .speaker-job-title {font-family:Bliss, Arial, sans-serif; }

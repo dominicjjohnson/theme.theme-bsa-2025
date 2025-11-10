@@ -1,0 +1,415 @@
+/* Modern Header Layout */
+.header {
+	width: 100%;
+	background-color: #fff;
+	position: relative;
+	z-index: 100;
+}
+
+.header-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	margin: 0 auto;
+	padding: 30px 20px 30px 20px ;
+	height: 220px !important;
+	margin: 15px 0px
+}
+
+/* Logo */
+.header-logo {
+	flex-shrink: 0;
+}
+
+.header-logo img {
+	height: 68px;
+	width: auto;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+	flex-grow: 1;
+	/* margin: 0 40px; */
+}
+
+/* WordPress menu container */
+.desktop-nav .menu-header-menu-container {
+	width: 100%;
+}
+
+/* WordPress menu list */
+.desktop-nav .menu,
+.desktop-nav #menu-header-menu {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	gap: 0px;
+	justify-content: center; /* Center the desktop menu */
+}
+
+.desktop-nav .menu li {
+	position: relative;
+	white-space: nowrap;
+}
+
+.desktop-nav .menu a {
+	text-decoration: none;
+	color: #333;
+	font-weight: 500; 
+	font-size: 16px;
+	text-transform: uppercase;
+	padding: 10px 25px;
+	display: block;
+	transition: color 0.3s ease;
+}
+
+.desktop-nav .menu a:hover {
+	color: #fcc95f;
+}
+
+/* Dropdown menus */
+.sub-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background: #000000;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	min-width: 200px;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease;
+	z-index: 1000;
+	text-transform: uppercase;
+}
+
+.sub-menu a {
+	color: #fff !important;
+	line-height: 24px;
+	font-size: 16px !important;
+}
+
+.desktop-nav .menu li:hover .sub-menu {
+	opacity: 1;
+	visibility: visible;
+}
+
+.desktop-nav .sub-menu li {
+	width: 100%;
+	white-space: normal;
+}
+
+.desktop-nav .sub-menu a {
+	padding: 12px 20px;
+	font-size: 13px;
+
+	border-bottom: 1px solid #f0f0f0;
+}
+
+/* Header Actions (Register + Social) */
+.header-actions {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	flex-shrink: 0;
+}
+
+.register-btn {
+	color: #fff !important;
+	background-color: #f96f6c;
+	padding: 8px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 12px;
+	border-radius: 3px;
+	transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+	background-color: #e55b58;
+}
+
+.social-icon {
+	display: inline-block;
+	margin-left: 8px;
+}
+
+.social-icon img {
+	width: 27px;
+	height: 27px;
+}
+/* Mobile Navigation */
+.mobile-nav {
+	position: fixed;
+	top: 200px; /* Position below header: 50px burger + 52px margin + 100px header height */
+	left: -100%;
+	width: 100%;
+	height: calc(100vh - 200px);
+	background: rgba(0, 40, 94, 0.95);
+	backdrop-filter: blur(10px);
+	z-index: 999;
+	transition: left 0.3s ease;
+	overflow-y: auto;
+}
+
+.mobile-nav .menu {
+	list-style: none;
+	margin: 0;
+	padding: 20px 0;
+}
+
+.mobile-nav .menu li {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav .menu a {
+	display: block;
+	padding: 15px 20px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.mobile-nav .menu a:hover {
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav .sub-menu {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.mobile-nav .sub-menu a {
+	padding: 12px 40px;
+	font-size: 14px;
+}
+
+/* Show mobile nav when open */
+body.nav-is-open .mobile-nav {
+	left: 0;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 985px) {
+	/* Hide desktop navigation on mobile */
+	.desktop-nav {
+		display: none;
+	}
+	
+	/* Mobile Navigation Toggle Button */
+	.nav-toggle {
+		z-index: 999999 !important;
+		background: #0B0C0C !important;
+		color: #fff !important;
+		height: 50px;
+		cursor: pointer;
+		position: fixed !important;
+		top: 0;
+		left: 0;
+		right: 0;
+		text-align: center;
+		padding: 10px;
+		line-height: 30px;
+		font-size: 16px;
+		font-weight: 600;
+		text-transform: uppercase;
+		transition: all 0.3s ease;
+		display: block !important;
+		width: 100% !important;
+	}
+	
+	.nav-toggle:before {
+		content: "\f0c9";
+		color: #fff;
+		margin-right: 8px;
+		font-family: "FontAwesome";
+	}
+	
+	.nav-toggle.is-open {
+		background: #fcc95f;
+		color: #0B0C0C;
+	}
+	
+	.nav-toggle.is-open:before {
+		content: "\f00d";
+		color: #0B0C0C;
+	}
+	
+	.nav-toggle:hover {
+		background: #fcc95f;
+		color: #0B0C0C;
+	}
+	
+	/* Show mobile navigation */
+	.mobile-nav {
+		display: block;
+	}
+	
+	/* Adjust header container for mobile */
+	.header-container {
+		padding: 0px 20px;
+		height: 100px !important;
+		/* padding-top: 60px; /* Account for fixed burger menu */ 
+	}
+	
+	/* Stack logo and actions vertically if needed */
+	.header-actions {
+		flex-wrap: wrap;
+		gap: 8px;
+		justify-content: flex-end; /* Align buttons to the right on mobile */
+	}
+	
+	.register-btn {
+		padding: 6px 15px;
+		font-size: 11px;
+	}
+	
+	.social-icon img {
+		width: 24px;
+		height: 24px;
+	}
+}
+
+/* Header margin for screens below 641px */
+@media (max-width: 640px) {
+	.header-container {
+		margin-top: 52px; /* Add top margin for smaller screens */
+	}
+	
+	/* Override scroll-to-fixed JavaScript inline styles on mobile */
+	.header.scroll-to-fixed-fixed {
+		width: 100% !important; /* Override fixed width */
+		max-width: 100% !important;
+		left: 0 !important;
+		right: 0 !important;
+		margin-left: 0 !important;
+		box-sizing: border-box;
+		margin-top: 50px !important; /* Ensure margin on mobile */
+	}
+}
+
+/* Header margin for screens at 820px */
+@media (max-width: 820px) {
+	.header-container {
+		margin-top: 50px; /* Add top margin for 820px screens */
+	}
+	
+	/* Override scroll-to-fixed JavaScript inline styles at 820px */
+	.header.scroll-to-fixed-fixed {
+		width: 100% !important; /* Override fixed width */
+		max-width: 100% !important;
+		left: 0 !important;
+		right: 0 !important;
+		margin-left: 0 !important;
+		box-sizing: border-box;
+		margin-top: 50px !important; /* Ensure margin on mobile */
+	}
+}
+
+/* Specific mobile device adjustments */
+@media (max-width: 412px) {
+	/* Extra margin for smaller mobile devices like iPhone Pro Max */
+	.header-container {
+		margin-top: 100px !important; /* More top margin for 412px screens */
+	}
+}
+
+/* iPad Pro specific fixes */
+@media (min-width: 768px) and (max-width: 985px) {
+	/* Ensure header doesn't overflow on iPad Pro */
+	.header-container {
+		width: 100%;
+		max-width: 100%;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+}
+
+/* Desktop Responsive Styles */
+@media (min-width: 986px) {
+	/* Hide mobile navigation on desktop */
+	.mobile-nav {
+		display: none;
+	}
+	
+	/* Larger logo for desktop */
+	.header-logo img {
+		height: 200px;
+	}
+	
+	/* Adjust header container height for larger logo */
+	.header-container {
+		height: 22px;
+	}
+}
+#header-social #social-strapline {color: #c1c1c1;}
+#header-social a:link, 
+#header-social a:visited, 
+#header-social a:active {display:inline-block;margin:0px;-webkit-border-radius:100%;-moz-border-radius:100%;border-radius:100%;width:30px;background:#c1c1c1;height:30px;}
+#header-social a:link i, 
+#header-social a:visited i, 
+#header-social a:active i {color:#fff;font-size:18px;width:30px;line-height:30px;text-align:center;position:relative;padding-top:2px;}
+#header-social a:link.twit:hover, 
+#header-social a:visited.twit:hover, 
+#header-social a:active.twit:hover {background:#2ca8d2;}
+#header-social a:link.face:hover, 
+#header-social a:visited.face:hover, 
+#header-social a:active.face:hover {background:#305891;}
+#header-social a:link.pin:hover, 
+#header-social a:visited.pin:hover, 
+#header-social a:active.pin:hover {background:#e1110e;}
+.nav, 
+.nav.has-js {position:static;margin:0;width:100%;}
+.nav {background:none;z-index:9999;position:relative !important;text-align:right;align-self:center;}
+.nav .menu {max-width:1200px;background:none;margin:0 auto;border-collapse:collapse;display:table;width:100%;}
+.nav .menu li {font-size:14px;font-weight:400;line-height:16px;text-transform:uppercase;display:inline-block;vertical-align:middle;}
+.nav .menu li:last-child {border-right:none;}
+.nav .menu li.current-menu-item a {color:#f96f6c;}
+.nav .menu a {color:#000;display:block;line-height:24px;padding:5px 14px;text-decoration:none;text-align:center;font-size:16px;}
+.nav .menu a:hover {color:#f96f6c;}
+.nav .sub-menu {display:none;z-index:99;}
+.nav .menu li:hover a {text-decoration:none;}
+.nav .menu li:hover .sub-menu {background:#0b0c0c;display:block;position:absolute;min-width:200px;}
+.nav .menu li:hover .sub-menu li {display:block;}
+.nav .menu li:hover .sub-menu a {padding:10px 5px;line-height:20px;min-height:0px;height:auto;border-bottom:1px solid #fbfbfb;height:auto;width:auto;color:#fff;text-align:left;}
+.nav .menu li:hover .sub-menu a:before {display:none;}
+.nav .menu li:hover .sub-menu a:hover {color:#f96f6c;}
+.nav .menu li:hover .sub-menu li:last-child a {border:none;}
+.nav-toggle {display: none;}
+@media only screen and (max-width:1000px) {
+	.header .header-container .header-logo {-moz-box-flex:0 1 30%;-webkit-box-flex:0 1 30%;-webkit-flex:0 1 30%;-ms-flex:0 1 30%;flex:0 1 30%;}
+	.header .header-container .nav {-moz-box-flex:0 2 45%;-webkit-box-flex:0 2 45%;-webkit-flex:0 2 45%;-ms-flex:0 2 45%;flex:0 2 45%;}
+}
+@media only screen and (max-width:825px) {
+	.header .header-container .header-logo .social .social-icon {display:none;}
+	.header .header-container .header-logo {-moz-box-flex:0 1 20%;-webkit-box-flex:0 1 20%;-webkit-flex:0 1 20%;-ms-flex:0 1 20%;flex:0 1 20%;}
+	.header .header-container .nav {-moz-box-flex:0 2 55%;-webkit-box-flex:0 2 55%;-webkit-flex:0 2 55%;-ms-flex:0 2 55%;flex:0 2 55%;}
+}
+@media only screen and (max-width:675px) {
+	.header .header-container {-moz-box-lines:multiple;-webkit-box-lines:multiple;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}
+	.header .header-container .header-details {-moz-box-flex:0 1 100%;-webkit-box-flex:0 1 100%;-webkit-flex:0 1 100%;-ms-flex:0 1 100%;flex:0 1 100%;}
+	.header .header-container .header-logo {-moz-box-flex:0 1 30%;-webkit-box-flex:0 1 30%;-webkit-flex:0 1 30%;-ms-flex:0 1 30%;flex:0 1 30%;}
+	.header .header-container .nav {-moz-box-flex:0 2 70%;-webkit-box-flex:0 2 70%;-webkit-flex:0 2 70%;-ms-flex:0 2 70%;flex:0 2 70%;}
+}
+@media only screen and (max-width:530px) {
+	.header .header-container {display:initial;}
+	.header .header-container .nav {
+		top: -54px;
+		text-align:center;
+	}
+	.header .header-container .header-logo .social {-webkit-box-pack:center;-webkit-justify-content:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-bottom:10px;}
+	.header .header-container .header-logo .social .social-icon {display:initial;}
+	.header.scroll-to-fixed-fixed .header-details a img {width:100px;} 
+	.header.scroll-to-fixed-fixed .nav .menu a {padding:5px 10px;}
+}
+/* Legacy 660px breakpoint removed - replaced by 985px/986px system */
+/* Legacy 960px breakpoint removed - replaced by 985px/986px system */
+/* Legacy 640px max-width breakpoint removed - now handled at 985px */
+@media only screen and (max-width: 440px) {
+	.header .header-container .header-logo .social {width:100%;}
+}
+/* Legacy 640px-1200px range breakpoint removed */
+/* Duplicate legacy 640px breakpoint removed */

@@ -1,0 +1,49 @@
+.home .textblock {
+	/*
+	@include wrap();
+	@include gutter(20);
+	background:$white;
+	margin:0 auto;
+	max-width:1200px;
+	*/
+	padding: {
+		bottom:20px;
+		top:20px;
+	}
+}
+.home .c img {
+	//border:15px solid $white;
+}
+.sponsor-list-wrapper .sponsor-logo-link, .sponsor-list-wrapper .sponsor-no-logo{
+  margin:0px !important;
+}
+
+.testimonial_rotator.template-longform .testimonial_rotator_quote { color:#FFF; font-size:1.75em; font-family:'Foundry'; font-style:italic; }
+.testimonial_rotator.template-longform hr.longform_hr { width:100%; height:2px; }
+.testimonial_rotator.template-longform .testimonial_rotator_author_info p { text-transform:uppercase; font-weight:700; color:#FFF; text-align:right; }
+
+.editor p.top-statement {
+	font-size:45px;
+	line-height:50px;
+	margin-left:45px;
+}
+
+.editor p.top-statement:before {
+	content:'+';
+	margin-left:-45px;
+	font-size:60px;
+	color:#f18626;
+	padding-right:10px;
+}
+
+.editor a.register-btn, .editor a.register-btn:active, .editor a.register-btn:visited {
+	text-transform:uppercase;
+	background-color:#00a8e6;
+	color:#FFF;
+	padding:0.5em 1.5em;
+	border-radius:5px;
+	margin-left:45px;
+	display:inline-block;
+	margin-top:20px;
+	text-decoration:none;
+}

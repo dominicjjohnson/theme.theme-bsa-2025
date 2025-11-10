@@ -1,0 +1,39 @@
+#sidebar{
+	.widget{
+	margin-bottom: 30px;
+	.title {
+		position:relative;
+		margin-bottom: 10px;
+		h2 {
+			color:$blue--dark;
+			font: {
+				size:17px;
+			}
+			text-align:center;
+			position:relative;
+			z-index:2;
+		}
+		&:before {
+			background:#ddd;
+			content:"";
+			height:1px;
+			position:absolute;
+				top:10px;
+				bottom:0;
+			width:100%;
+			z-index:1;
+		}
+		span {
+			background:$white;
+			padding:0 10px;
+			a:link,
+			a:visited,
+			a:active{
+				text-decoration: none;
+				color:$blue--dark;
+				
+			}
+		}
+	}
+}
+}

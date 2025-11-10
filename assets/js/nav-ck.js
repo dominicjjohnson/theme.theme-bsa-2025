@@ -1,0 +1,1 @@
+jQuery(document).ready(function(e){e("html").addClass("use-transitions");(function(){e("html").removeClass("no-js");e(".nav").addClass("has-js");e(".wrapper").prepend('<div class="nav-toggle"></div>')})();e(".nav-toggle").click(function(t){t.preventDefault();e("body").toggleClass("nav-is-open")})});

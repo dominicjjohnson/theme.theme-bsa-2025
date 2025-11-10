@@ -1,0 +1,157 @@
+.redux-messageredux-notice{
+	display: none !important;
+}
+
+body.extranet{
+	#miramedia_extranet_admin_header_message{
+		display: none;
+	}
+	background: #f4f4f4;
+	img{
+		max-width: 100%;
+		height: auto;
+		width: auto;
+	}
+	.ui-accordion {
+		h3 {
+			background: #0a003c !important;
+			color: #fff;
+			i{
+				color: #fff;
+			}
+			a:link,
+			a:visited,
+			a:active{
+				color: #fff;
+			}
+		}
+		.ui-accordion-content{
+			padding: 10px;
+		}
+	}
+	#extranet_breadcrumbs {
+		margin-bottom: 20px;
+		background-color: #5a5b5d;
+		padding: 10px;
+		color: #222;
+		a {
+			color: #fff;
+			text-decoration: none;
+			font-weight: normal;
+		}
+	}
+	
+	#exhibitor-manuals-column-2{
+		background: #ececec;
+		color: #3d3938;
+		border-top: 15px solid #0a003c;
+		padding: 10px;
+	}
+	.exhibitor-zone-text-block {
+		color: #808285;
+		h1 {
+			color: #009CD6;
+			font: {
+				size:36px;
+				weight:700;
+			}
+			line-height:42px;
+			margin:0 0 10px 0;
+			strong {
+				color:#1d0e46;
+			}
+		}
+		h2 {
+			color: #009CD6;
+			font: {
+				size:25px;
+				weight:500;
+			}
+			line-height:30px;
+			margin-bottom:15px;
+			a{
+				text-decoration: none;
+			}
+		}
+		h3 {
+			color:#009CD6;
+			font: {
+				size:18px;
+				weight: 600;
+			}
+			line-height:22px;
+			margin-bottom:10px;
+			text-transform: uppercase;
+		}
+		h4 {
+
+		}
+		h5 {
+
+		}
+		h6 {
+
+		}
+		p {
+			font: {
+				size:15px;
+			}
+			line-height:24px;
+			margin:0 0 20px 0;
+			color: #342f2e;
+		}
+		ul {
+			list-style:disc;
+			margin:0 30px 20px;
+			color: #342f2e;
+		}
+		ol {
+			display: block;
+			color: #342f2e;
+		    list-style-type: decimal;
+		    margin-top: 1em;
+		    margin-bottom: 1em;
+		    margin-left: 0;
+		    margin-right: 0;
+		    padding-left: 40px;
+		}
+		li {
+			font: {
+				size:15px;
+			}
+			color: #342f2e;
+			line-height:24px;
+		}
+		strong {
+			color:#111;
+			font:{
+				weight:600;
+			}
+		}
+		a, a:active, a:visited {
+			color:#DC5964;
+		}
+		a:focus {
+
+		}
+		a:hover {
+			text-decoration:none;
+		}
+		.alignright {
+			float: right;
+			margin-left: 20px;
+			margin-bottom: 10px;
+		}
+		.alignleft{
+			float: left;
+			margin-right: 20px;
+			margin-bottom: 10px;
+		}
+		.aligncenter {
+			margin-bottom: 10px;
+			display: block;
+			text-align: center;
+			margin: 0 auto;
+		}
+	}
+}

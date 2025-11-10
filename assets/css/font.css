@@ -1,0 +1,82 @@
+
+@font-face {
+  font-family: 'Poppins', sans-serif;
+  /* IE9 Compat Modes */
+/*  src: url('../fonts/bliss/blsw-rg.eot'); */
+  src: url('../fonts/Poppins/Poppins-Medium.ttf');
+
+  /* IE6-IE8 */
+  /* Super Modern Browsers */
+  /* Pretty Modern Browsers */
+  /* Safari, Android, iOS */
+  src: url('../fonts/bliss/blsw-rg.eot?#iefix') format('embedded-opentype'), url('../fonts/bliss/blsw-rg.woff2') format('woff2'), url('../fonts/bliss/blsw-rg.woff') format('woff'), url('../fonts/bliss/blsw-rg.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+}
+@font-face {
+  font-family: 'Poppins', sans-serif;
+  /* IE9 Compat Modes */
+  src: url('../fonts/bliss/blsw-lt.eot');
+  /* IE6-IE8 */
+  /* Super Modern Browsers */
+  /* Pretty Modern Browsers */
+  /* Safari, Android, iOS */
+  src: url('../fonts/bliss/blsw-lt.eot?#iefix') format('embedded-opentype'), url('../fonts/bliss/blsw-lt.woff2') format('woff2'), url('../fonts/bliss/blsw-lt.woff') format('woff'), url('../fonts/bliss/blsw-lt.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-variant: normal;
+}
+@font-face {
+  font-family: 'Poppins', sans-serif;
+  /* IE9 Compat Modes */
+  src: url('../fonts/bliss/blsw-ltit.eot');
+  /* IE6-IE8 */
+  /* Super Modern Browsers */
+  /* Pretty Modern Browsers */
+  /* Safari, Android, iOS */
+  src: url('../fonts/bliss/blsw-ltit.eot?#iefix') format('embedded-opentype'), url('../fonts/bliss/blsw-ltit.woff2') format('woff2'), url('../fonts/bliss/blsw-ltit.woff') format('woff'), url('../fonts/bliss/blsw-ltit.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+  font-variant: normal;
+}
+body {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 200 !important;
+}
+@font-face {
+  font-family: 'Poppins', sans-serif;
+  /* IE9 Compat Modes */
+  src: url('../fonts/foundry/315F57_1_0.eot');
+  /* IE6-IE8 */
+  /* Super Modern Browsers */
+  /* Pretty Modern Browsers */
+  /* Safari, Android, iOS */
+  src: url('../fonts/foundry/315F57_1_0.eot?#iefix') format('embedded-opentype'), url('../fonts/foundry/315F57_1_0.woff2') format('woff2'), url('../fonts/foundry/315F57_1_0.woff') format('woff'), url('../fonts/foundry/315F57_1_0.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+}
+@font-face {
+  font-family: 'Poppins', sans-serif;
+  /* IE9 Compat Modes */
+  src: url('../fonts/foundry/315F57_0_0.eot');
+  /* IE6-IE8 */
+  /* Super Modern Browsers */
+  /* Pretty Modern Browsers */
+  /* Safari, Android, iOS */
+  src: url('../fonts/foundry/315F57_0_0.eot?#iefix') format('embedded-opentype'), url('../fonts/foundry/315F57_0_0.woff2') format('woff2'), url('../fonts/foundry/315F57_0_0.woff') format('woff'), url('../fonts/foundry/315F57_0_0.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-variant: normal;
+}
+h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, a:visited {
+  font-family: 'Poppins', Arial, sans-serif !important;
+}
+body {
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
