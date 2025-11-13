@@ -51,11 +51,23 @@ function flg_scripts() {
   	if (is_page('exhibitors') || is_page('speakers') || is_page('seminars')) {
   		wp_enqueue_style( 'datatables-css' );
   	}
+    wp_enqueue_style( 'flg-bxslider' );
+    wp_enqueue_style( 'flg-slick' );
+    wp_enqueue_style( 'flg-slicktheme' );
+    wp_enqueue_style( 'flg-owl' );
   	wp_enqueue_style( 'flg-image-block' );
 
   	wp_enqueue_script( 'flg-modernizr' );
   	wp_enqueue_script( 'flg-scrolltofixed' );
-  	// Sliders only loaded conditionally by shortcodes now
+
+    wp_enqueue_script( 'flg-bxslider' );
+    wp_enqueue_script( 'flg-slick' );
+    wp_enqueue_script( 'flg-owl' );
+    wp_enqueue_script( 'flg-common' );
+    wp_enqueue_script( 'flg-nav' );
+    wp_enqueue_script( 'datatables-js' );
+    
+    
   	wp_enqueue_script( 'flg-common' );
   	wp_enqueue_script( 'flg-nav' );
   	// DataTables only loaded when needed
@@ -63,6 +75,7 @@ function flg_scripts() {
   		wp_enqueue_script( 'datatables-js' );
   	}
 
+  /* enqueue styles */
 
 
 }
