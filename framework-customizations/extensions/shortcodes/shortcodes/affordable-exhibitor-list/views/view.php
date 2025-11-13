@@ -45,16 +45,15 @@
 			$title = get_the_title($post);
 			$permalink = get_permalink($post);
 			$attachment_id = get_post_meta($post->ID, 'profile_logo', true);
-			if($attachment_id){
-				$attachment = wp_get_attachment_image_src($attachment_id, 'full');
-				$exhibitor_logo_src = $attachment[0];
+			if ($attachment_id) {
+				$attachment = wp_get_attachment_image_src($attachment_id, 'cd ');
+				$exhibitor_logo_src = $attachment ? $attachment[0] : '';
 			} else {
-				$exhibitor_logo_src = ''; 
+				$exhibitor_logo_src = '';
 			}
-			$content = get_post_meta($post->ID, 'ex_rich_text_profile', true);
-			
-			$short_con = substr($content, 0, 75);
 
+			$content = get_post_meta($post->ID, 'ex_rich_text_profile', true);
+			$short_con = substr($content, 0, 75);
  
  			////////////////////// Checking for trails ///////////////// 
 
@@ -110,18 +109,20 @@
 				$link = '';
 			}
 
-$exhibitors .= <<<HERE
-	<div class="exhibitor-list--block atoz_$first $categoryclasses" data-letter="$first">
-		<a class="logo-box" href="$permalink" title="$title Profile" ><img src="$exhibitor_logo_src" /></a>
-		<div class="exhibitor-text">
-		<p class="exhibitor-title">Stand $stand_number | <a href="$permalink" title="$title Profile">$title</a></p>
-		<div class="exhibitor-details">
-		$exhibitor_cont
-		</div>
-		$link
-		</div>
-</div>
-HERE;
+			$exhibitors .= <<<HERE
+				<div class="exhibitor-list--block atoz_$first $categoryclasses" data-letter="$first">
+					<a class="logo-box" href="$permalink" title="$title Profile">
+						<img src="$exhibitor_logo_src" alt="$title Logo" />
+					</a>
+					<div class="exhibitor-text">
+						<p class="exhibitor-title">Stand $stand_number | <a href="$permalink" title="$title Profile">$title</a></p>
+						<div class="exhibitor-details">
+							$exhibitor_cont
+						</div>
+						$link
+					</div>
+				</div>
+			HERE;
 
 		endwhile;
 

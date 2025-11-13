@@ -48,7 +48,7 @@
 	
 	// Add preload hints for critical resources
 	function bsa_add_preload_hints() {
-		echo '<link rel="preload" href="' . get_template_directory_uri() . '/assets/css/style.css" as="style">' . "\n";
+		echo '<link rel="preload" href="' . get_template_directory_uri() . '/assets/css/style.css?v2.2" as="style">' . "\n";
 		echo '<link rel="preload" href="' . includes_url('js/jquery/jquery.min.js') . '" as="script">' . "\n";
 	}
 	add_action('wp_head', 'bsa_add_preload_hints', 1);

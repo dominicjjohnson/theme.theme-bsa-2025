@@ -364,7 +364,7 @@ body .unyson-sponsors .sponsor-list-wrapper.excerpt .full-sponsor .content-left 
 .fw-page-builder-content .unyson-bxslider-wrapper .bx-wrapper .bx-controls .bx-controls-direction a.bx-next {background-image:url('../img/arrow-right.png');right:3%;left:auto;}
 #exhibitor-list--block-layout * {box-sizing:border-box;}
 #exhibitor-list--block-layout .exhibitor-list--block {width:48%;box-sizing:border-box;display:inline-block;vertical-align:top;padding:0px 10px;margin:0px 0px 90px 0px;}
-#exhibitor-list--block-layout .exhibitor-list--block .logo-box {width:100%;padding:5px;display:inline-block;height:100px;margin-right:5px;margin-bottom:10px;white-space:nowrap;background-size:90% auto;background-repeat:no-repeat;background-position:center;background-color:#fff;}
+#exhibitor-list--block-layout .exhibitor-list--block .logo-box {padding:5px;display:inline-block;height:100px;margin-right:5px;margin-bottom:10px;white-space:nowrap;background-size:90% auto;background-repeat:no-repeat;background-position:center;background-color:#fff;}
 #exhibitor-list--block-layout .exhibitor-list--block .logo-box img {height:100%;}
 #exhibitor-list--block-layout .exhibitor-list--block .exhibitor-text .exhibitor-title {font-size:20px;color:#000;margin-bottom:5px;}
 #exhibitor-list--block-layout .exhibitor-list--block .exhibitor-text .exhibitor-details p {display:inline;}
@@ -723,3 +723,26 @@ table#participant-list tr {border-bottom:1px solid #ddd;}
 	white-space: nowrap;
 	border: 0;
 }
+
+/* Css to sort the exhibitor list out */
+.logo-box {
+  width: 260px;              /* Slightly wider than image */
+  height: 80px;              /* Allows vertical breathing room */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0 auto;            /* Center the box itself */
+  padding: 5px;
+}
+
+.logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+
+
+
